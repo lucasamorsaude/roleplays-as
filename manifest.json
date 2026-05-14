@@ -9,7 +9,17 @@
     { "file": "personas/07_dona_lucia.md",    "name": "Dona Lúcia",      "age": 72, "role": "Aposentada (ex-professora)",         "emoji": "👵" },
     { "file": "personas/08_fernanda.md",      "name": "Fernanda",        "age": 32, "role": "Empreendedora (loja Instagram)",     "emoji": "💼" },
     { "file": "personas/09_seu_ze.md",        "name": "Seu Zé",          "age": 60, "role": "Aposentado (ex-trabalhador rural)",  "emoji": "🌾" },
-    { "file": "personas/10_amanda.md",        "name": "Amanda",          "age": 19, "role": "Atendente + técnico em enfermagem",  "emoji": "💄" }
+    { "file": "personas/10_amanda.md",        "name": "Amanda",          "age": 19, "role": "Atendente + técnico em enfermagem",  "emoji": "💄" },
+    { "file": "personas/11_ze_roberto.md",    "name": "Zé Roberto",      "age": 52, "role": "Comerciante (mercadinho de bairro)","emoji": "🛒" },
+    { "file": "personas/12_larissa.md",       "name": "Larissa",         "age": 34, "role": "Mãe solo · Auxiliar administrativa", "emoji": "👩‍👧" },
+    { "file": "personas/13_alessandro.md",    "name": "Alessandro",      "age": 58, "role": "Servidor aposentado (tem plano)",    "emoji": "🏛️" },
+    { "file": "personas/14_vanessa.md",       "name": "Vanessa",         "age": 39, "role": "Enfermeira da rede pública",         "emoji": "👩‍⚕️" },
+    { "file": "personas/15_seu_onofre.md",    "name": "Seu Onofre",      "age": 65, "role": "Pequeno produtor rural",             "emoji": "🐂" },
+    { "file": "personas/16_bianca.md",        "name": "Bianca",          "age": 22, "role": "Universitária (Vet. UFSJ)",          "emoji": "🎓" },
+    { "file": "personas/17_dona_cleusa.md",   "name": "Dona Cleusa",     "age": 51, "role": "Empregada doméstica",                "emoji": "🧹" },
+    { "file": "personas/18_marcelo.md",       "name": "Marcelo",         "age": 41, "role": "Bancário (gerente Sicoob)",          "emoji": "🏦" },
+    { "file": "personas/19_dona_sueli.md",    "name": "Dona Sueli",      "age": 67, "role": "Viúva recente · ex-professora",      "emoji": "🌙" },
+    { "file": "personas/20_eduardo.md",       "name": "Eduardo",         "age": 27, "role": "Dev de software (remoto)",           "emoji": "💻" }
   ],
   "roleplays": [
     {

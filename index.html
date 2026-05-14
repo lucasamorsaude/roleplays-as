@@ -125,7 +125,8 @@
   .category .chevron {
     font-size: 10px;
     color: var(--text-dim);
-    transition: transform .15s ease;
+    transition: transform .25s ease;
+    display: inline-block;
   }
   .category-group.open .chevron { transform: rotate(90deg); }
   .category .count {
@@ -138,10 +139,19 @@
     margin-left: 8px;
   }
   .category-items {
-    display: none;
-    padding: 4px 0 4px 4px;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .25s ease;
   }
-  .category-group.open .category-items { display: block; }
+  .category-items-inner {
+    overflow: hidden;
+    min-height: 0;
+    padding-left: 4px;
+  }
+  .category-group.open .category-items {
+    grid-template-rows: 1fr;
+    padding: 4px 0;
+  }
   .preview-toolbar {
     display: flex;
     gap: 8px;
@@ -384,6 +394,8 @@ function renderRoleplaysList() {
 
     const itemsWrap = document.createElement('div');
     itemsWrap.className = 'category-items';
+    const itemsInner = document.createElement('div');
+    itemsInner.className = 'category-items-inner';
     cat.items.forEach(r => {
       total++;
       const el = document.createElement('div');
@@ -391,8 +403,9 @@ function renderRoleplaysList() {
       el.dataset.file = r.file;
       el.innerHTML = `<div class="title">${r.name}</div>`;
       el.addEventListener('click', () => selectRoleplay(r, el));
-      itemsWrap.appendChild(el);
+      itemsInner.appendChild(el);
     });
+    itemsWrap.appendChild(itemsInner);
     group.appendChild(itemsWrap);
     list.appendChild(group);
   });

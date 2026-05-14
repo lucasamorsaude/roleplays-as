@@ -1,0 +1,49 @@
+{
+  "personas": [
+    { "file": "personas/01_dona_maria.md",    "name": "Dona Maria",      "age": 68, "role": "Aposentada (ex-costureira)",        "emoji": "👵" },
+    { "file": "personas/02_carlos_eduardo.md","name": "Carlos Eduardo",  "age": 45, "role": "Pedreiro autônomo",                  "emoji": "👨‍🔧" },
+    { "file": "personas/03_juliana.md",       "name": "Juliana",         "age": 28, "role": "Atendente de farmácia",              "emoji": "👩‍👧" },
+    { "file": "personas/04_pedro_henrique.md","name": "Pedro Henrique",  "age": 21, "role": "Universitário + estagiário",         "emoji": "🧑‍🎓" },
+    { "file": "personas/05_aparecida.md",     "name": "Aparecida (Cida)","age": 55, "role": "Dona de casa",                       "emoji": "👩‍🍳" },
+    { "file": "personas/06_rafael.md",        "name": "Rafael",          "age": 35, "role": "Motorista de aplicativo",            "emoji": "🚗" },
+    { "file": "personas/07_dona_lucia.md",    "name": "Dona Lúcia",      "age": 72, "role": "Aposentada (ex-professora)",         "emoji": "👵" },
+    { "file": "personas/08_fernanda.md",      "name": "Fernanda",        "age": 32, "role": "Empreendedora (loja Instagram)",     "emoji": "💼" },
+    { "file": "personas/09_seu_ze.md",        "name": "Seu Zé",          "age": 60, "role": "Aposentado (ex-trabalhador rural)",  "emoji": "🌾" },
+    { "file": "personas/10_amanda.md",        "name": "Amanda",          "age": 19, "role": "Atendente + técnico em enfermagem",  "emoji": "💄" }
+  ],
+  "roleplays": [
+    {
+      "category": "Relacionamento",
+      "emoji": "💬",
+      "items": [
+        { "file": "roleplays/relacionamento/01_captacao_aniversariante.md", "name": "Captação de Aniversariante" },
+        { "file": "roleplays/relacionamento/02_captacao_novo_filiado.md",   "name": "Captação de Novo Filiado (Cartão de TODOS)" },
+        { "file": "roleplays/relacionamento/03_confirmacao_consulta.md",    "name": "Confirmação de Consulta" },
+        { "file": "roleplays/relacionamento/04_paciente_faltoso.md",        "name": "Paciente Faltoso" },
+        { "file": "roleplays/relacionamento/05_lista_espera.md",            "name": "Lista de Espera / Captação Ativa" }
+      ]
+    },
+    {
+      "category": "Medicina",
+      "emoji": "🩺",
+      "items": [
+        { "file": "roleplays/medicina/01_checkin_cashback.md",       "name": "Check-in com Oferta de Cashback" },
+        { "file": "roleplays/medicina/02_oferta_exames.md",          "name": "Oferta de Exames Pós-Consulta" },
+        { "file": "roleplays/medicina/03_orcamento_nao_efetivado.md","name": "Reativação de Orçamento Não Efetivado" },
+        { "file": "roleplays/medicina/04_contorno_objecoes.md",      "name": "Contorno de Objeções (Medicina)" },
+        { "file": "roleplays/medicina/05_followup_pos_exame.md",     "name": "Follow-up Pós-Exame" }
+      ]
+    },
+    {
+      "category": "Odontologia",
+      "emoji": "🦷",
+      "items": [
+        { "file": "roleplays/odontologia/01_fechamento_tratamento.md",    "name": "Fechamento de Tratamento Odontológico" },
+        { "file": "roleplays/odontologia/02_captacao_medicina_odonto.md", "name": "Captação Medicina → Odonto (Recepção)" },
+        { "file": "roleplays/odontologia/03_faltoso_lista_espera.md",     "name": "Faltoso / Lista de Espera Odontologia" },
+        { "file": "roleplays/odontologia/04_objecoes_odonto.md",          "name": "Objeções Específicas de Odontologia" },
+        { "file": "roleplays/odontologia/05_limpeza_dentalvidas.md",      "name": "Limpeza DentalVidas" }
+      ]
+    }
+  ]
+}

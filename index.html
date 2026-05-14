@@ -105,16 +105,43 @@
     color: var(--text-dim);
     margin-top: 2px;
   }
+  .category-group { margin-bottom: 4px; }
   .category {
-    padding: 8px 12px 4px;
-    font-size: 11px;
+    padding: 10px 12px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: .8px;
-    color: var(--text-dim);
+    letter-spacing: .6px;
+    color: var(--text);
     font-weight: 600;
-    margin-top: 8px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background .12s ease;
   }
-  .category:first-child { margin-top: 0; }
+  .category:hover { background: var(--bg-elev-2); }
+  .category .chevron {
+    font-size: 10px;
+    color: var(--text-dim);
+    transition: transform .15s ease;
+  }
+  .category-group.open .chevron { transform: rotate(90deg); }
+  .category .count {
+    font-size: 10px;
+    color: var(--text-dim);
+    background: var(--bg-elev-2);
+    padding: 2px 7px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  .category-items {
+    display: none;
+    padding: 4px 0 4px 4px;
+  }
+  .category-group.open .category-items { display: block; }
   .preview-toolbar {
     display: flex;
     gap: 8px;
@@ -342,11 +369,21 @@ function renderRoleplaysList() {
   const list = $('#roleplays-list');
   list.innerHTML = '';
   let total = 0;
-  state.manifest.roleplays.forEach(cat => {
-    const catEl = document.createElement('div');
-    catEl.className = 'category';
-    catEl.textContent = `${cat.emoji} ${cat.category}`;
-    list.appendChild(catEl);
+  state.manifest.roleplays.forEach((cat, idx) => {
+    const group = document.createElement('div');
+    group.className = 'category-group' + (idx === 0 ? ' open' : '');
+
+    const header = document.createElement('div');
+    header.className = 'category';
+    header.innerHTML = `
+      <span><span class="chevron">▶</span> ${cat.emoji} ${cat.category}</span>
+      <span class="count">${cat.items.length}</span>
+    `;
+    header.addEventListener('click', () => group.classList.toggle('open'));
+    group.appendChild(header);
+
+    const itemsWrap = document.createElement('div');
+    itemsWrap.className = 'category-items';
     cat.items.forEach(r => {
       total++;
       const el = document.createElement('div');
@@ -354,8 +391,10 @@ function renderRoleplaysList() {
       el.dataset.file = r.file;
       el.innerHTML = `<div class="title">${r.name}</div>`;
       el.addEventListener('click', () => selectRoleplay(r, el));
-      list.appendChild(el);
+      itemsWrap.appendChild(el);
     });
+    group.appendChild(itemsWrap);
+    list.appendChild(group);
   });
   $('#roleplay-count').textContent = `${total} disponíveis`;
 }
